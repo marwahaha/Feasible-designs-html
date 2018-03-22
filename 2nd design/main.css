@@ -1,0 +1,30 @@
+body {
+	display:inline;
+	text-align: center;
+	background-image: url("https://img00.deviantart.net/ac3c/i/2015/105/a/8/420_inari_by_pjynico-d86ubdy.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+header {
+	color: pink;
+}
+
+.button {
+	margin: 20px;
+	width: 50%;
+	text-align: center;
+}
+
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+    margin: 20px;
+}
+
+.nav-fill .nav-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 10px;
