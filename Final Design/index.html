@@ -48,11 +48,8 @@
 					<br>
 					<input type="submit" value="Submit" id="submit" onclick="GetName_LoadPage">
 
-					
 				</form>
 			</div>
-			
-			
 		</div>
 		
 	</div>
@@ -60,21 +57,13 @@
 		function GetName_LoadPage() {
 			var txt;
 			var person = prompt("Please enter your username:", "Bob Ross-chan");
-			
-
 			var x = document.getElementById("submit");
 			if (x.style.display === "none") {
 			x.style.display = "block";
 			} 
 			else {
 			x.style.display = "none";
-			}
-		}
-
-
-
-
-			
+			}	
 			if (person == null || person == "") {
 				txt = "You have canclled the prompt.";
 			} 
@@ -87,19 +76,18 @@
 			};
 			
 			document.getElementById("play_nav").onclick = function () {
-				
 				window.location.href = "Pages/Intro/Intro.html";
-			};
-				
+			};		
 		}
 		
 		function goToHelpPage() {
 			
 			document.getElementById("help_button").onclick = function () {
-				window.location.href = "Pages/Help/Help.html";
+				window.location.href = "Pages/Help/Help.html"
 			};
-			
-		}
-	</script>
+				
+    }	
+		
+</script>
 </body> 
 </html>
