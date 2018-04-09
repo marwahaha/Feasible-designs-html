@@ -1,10 +1,6 @@
 <!-- Final Design -->
 <!doctype html>
 <html lang="en">
-<?php
-	$person = $_POST['person'];
-	echo $person;
-?>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -25,28 +21,30 @@
 	<header> <h1>Bob Ross and the hunt for the perfect mountain</h1> </header>
     <div class="container">
 	<nav>
+		<form method="post" id="username_form" action="db_connection.php">
 		<ul class="nav nav-pills nav-fill">
 		  <li class="nav-item">
 			<a class="nav-link active"  href="index.html">Home</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link active" id="play_nav"  onclick="GetName_LoadPage()">Play (push twice)</a>
+			<a class="nav-link active" id="play_nav" name="person" onclick="GetName_LoadPage()">Play (push twice)</a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link active" href="Pages/Help/Help.html">F.A.Q/Help</a>
 		  </li>
 		</ul>
+		</form>
 	</nav>
 	
 		<div class="content">
 			<div class="greeting">
 				<img src="Images/clorox-chan.png" id="clorox_can" alt="clorox chan" width=450px height=550px>
-				<form method="post" name="username">
-					<input class="button" id="start_button" type="button" onclick="GetName_LoadPage()" value="Go to game (push twice)">
-					<br>
+				<form method="post" id="username_form" action="db_connection.php">
+					<input class="button" id="start_button" name="person" type="button" onclick="GetName_LoadPage()" value="Go to game (push twice)">
+						<br>
 					<input class="button" id="help_button" type="button" onclick="location.href='Pages/Help/Help.html';" value="Help/F.A.Q" >
-					<br>
-					<input type="submit" value="Submit" id="submit" onclick="GetName_LoadPage">
+						<br>
+					<input type="submit" value="Submit" id="submit" onclick="GetName_LoadPage()">
 
 				</form>
 			</div>
@@ -56,24 +54,18 @@
 	<script>
 		function GetName_LoadPage() {
 			var txt;
-			var person = prompt("Please enter your username:", "Bob Ross-chan");
-			var x = document.getElementById("submit");
-			if (x.style.display === "none") {
-			x.style.display = "block";
-			} 
-			else {
-			x.style.display = "none";
-			}	
+			var person = prompt("Please enter your username:", "Bob Ross-chan");	
 			if (person == null || person == "") {
 				txt = "You have canclled the prompt.";
 			} 
 			else {
 				txt = "Hello " + person + "! How are you today?";
 			}
-			
+			document.getElementById("start_button").value = person;
 			document.getElementById("start_button").onclick = function () {
 				window.location.href = "Pages/Intro/Intro.html";
 			};
+			
 			
 			document.getElementById("play_nav").onclick = function () {
 				window.location.href = "Pages/Intro/Intro.html";
