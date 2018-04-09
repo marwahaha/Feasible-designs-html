@@ -1,10 +1,5 @@
-<!-- Final Design -->
 <!doctype html>
 <html lang="en">
-<?php
-	$person = $_POST['person'];
-	echo $person;
-?>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,7 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="CSS/main.css" >
+	<link rel="stylesheet" href="../../CSS/Help.css" >
 	 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -27,31 +22,31 @@
 	<nav>
 		<ul class="nav nav-pills nav-fill">
 		  <li class="nav-item">
-			<a class="nav-link active"  href="index.html">Home</a>
+			<a class="nav-link active"  href="../../index.html">Home</a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link active" id="play_nav"  onclick="GetName_LoadPage()">Play (push twice)</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link active" href="Pages/Help/Help.html">F.A.Q/Help</a>
+			<a class="nav-link active" href="Help.html">F.A.Q/Help</a>
 		  </li>
 		</ul>
 	</nav>
 	
-		<div class="content">
-			<div class="greeting">
-				<img src="Images/clorox-chan.png" id="clorox_can" alt="clorox chan" width=450px height=550px>
-				<form method="post" name="username">
-					<input class="button" id="start_button" type="button" onclick="GetName_LoadPage()" value="Go to game (push twice)">
-					<br>
-					<input class="button" id="help_button" type="button" onclick="location.href='Pages/Help/Help.html';" value="Help/F.A.Q" >
-					<br>
-					<input type="submit" value="Submit" id="submit" onclick="GetName_LoadPage">
-
-					
-				</form>
-			</div>
+		<div class="content" width=450px height=550px>
+			<img src="../../Images/help_img.png" width=450px height=550px style="float:left;">
 			
+			<div class="helpText">
+			
+				<h4>What is this game?</h4>
+					<p>The point of this game is to find the perfect mountain to paint by making the right choices to find the perfect mountain to paint.</p>
+				<br>
+				<h4>Why do I need to push twice?</h4>
+					<p>Because HTML and JavaScript have decided to not cooperate; the solution is to push twice.</p>
+				<br>
+				<h4>Why are you recording names?</h4>
+					<p>Because I have always wanted an excuse to learn how to set up a databse, and so I can also use PHP and MySQL.</p>
+			</div>
 			
 		</div>
 		
@@ -60,21 +55,6 @@
 		function GetName_LoadPage() {
 			var txt;
 			var person = prompt("Please enter your username:", "Bob Ross-chan");
-			
-
-			var x = document.getElementById("submit");
-			if (x.style.display === "none") {
-			x.style.display = "block";
-			} 
-			else {
-			x.style.display = "none";
-			}
-		}
-
-
-
-
-			
 			if (person == null || person == "") {
 				txt = "You have canclled the prompt.";
 			} 
@@ -82,13 +62,10 @@
 				txt = "Hello " + person + "! How are you today?";
 			}
 			
-			document.getElementById("start_button").onclick = function () {
-				window.location.href = "Pages/Intro/Intro.html";
-			};
+		
 			
 			document.getElementById("play_nav").onclick = function () {
-				
-				window.location.href = "Pages/Intro/Intro.html";
+				window.location.href = "../Intro/Intro.html"
 			};
 				
 		}
@@ -96,10 +73,18 @@
 		function goToHelpPage() {
 			
 			document.getElementById("help_button").onclick = function () {
-				window.location.href = "Pages/Help/Help.html";
+				window.location.href = "Pages/Help/Help.html"
 			};
 			
 		}
+		
+	
 	</script>
-</body> 
+	
+	
+
+   
+  </body>
+  
+  
 </html>
