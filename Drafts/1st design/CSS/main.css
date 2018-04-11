@@ -1,0 +1,59 @@
+body {
+	display:block;
+	text-align: center;
+	background-image: url("https://i.pinimg.com/originals/6b/68/8e/6b688ebd01b5d96f2babe8cc60b01fe6.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 0px;
+}
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+a:hover {
+    color: red;
+}
+.nav {
+	float:left;
+	margin: 0px;
+	clear: left;
+}
+.nav-pills .nav-link {
+    border-radius: .25rem;
+    width: 125px;
+	margin: 30px;
+	text-align: center;	
+}
+header {
+	text-align: center;
+	color: white;
+}
+div.container {
+	margin-left: 0px;
+	text-align: center;	
+}
+div.greeting {
+	text-align:center;
+	float: right;
+}
+.button {
+	margin: 20px;
+	width: 50%;
+	text-align: center;
+}
+div.intro_links {
+	margin: 20px;
+	height: 50px;
+}
+
+.nav-fill .nav-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 10px;
+}
