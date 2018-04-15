@@ -23,20 +23,3 @@ if (mysqli_query($conn, $sql)) {
 mysqli_close($conn);
 ?>
 
-<!doctype html>
-<html>
-<head>
-	<title> Example</title>
-</head>
-<body>
-<ol>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-   <li>Vestibulum auctor dapibus neque.</li>
-</ol>
-
-<p>
-This page is empty, here would go one of my scenarios
-</p>
-</body>
-</html>

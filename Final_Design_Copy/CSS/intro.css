@@ -1,9 +1,9 @@
 body {
 	height:100%;
 	width:100%
-	display: block;
+	display:block;
 	text-align: center;
-	background-image: url("../Images/Backgrounds/bright_background.jpg");
+	background-image: url("../Images/Backgrounds/intro.jpg"); 
 	background-size: cover;
 	background-repeat: no-repeat;
 	
@@ -12,11 +12,7 @@ body {
 header {
 	color: pink;
 }
-.button {
-	margin: 20px;
-	width: 25%;
-	text-align: center;
-}
+
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
     margin: 20px;
@@ -31,8 +27,14 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 img {
 	vertical-align: middle;
+	float:left;
 }
 
 body, html {
 	overflow: auto;
+}
+
+p {
+	font-size: 30px;
+	text-shadow: 2px 2px #FF0000;
 }
