@@ -7,7 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="../../CSS/Help.css" >
+	<link rel="stylesheet" href="../../CSS/left_turn.css" >
 	 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -25,61 +25,36 @@
 			<a class="nav-link active"  href="../../index.html">Home</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link active" id="play_nav"  onclick="GetName_LoadPage()">Play (push twice)</a>
+			<a class="nav-link active" id="play_nav"  onclick="location.href='../Intro/Intro.html';">Play</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link active" href="Help.html">F.A.Q/Help</a>
+			<a class="nav-link active" href="../Help/Help.html">F.A.Q/Help</a>
 		  </li>
 		</ul>
 	</nav>
 	
 		<div class="content" width=450px height=550px>
-			<img src="../../Images/help_img.png" width=450px height=550px style="float:left;">
-			
-			<div class="helpText">
-			
-				<h4>What is this game?</h4>
-					<p>The point of this game is to find the perfect mountain to paint by making the right choices to find the perfect mountain to paint.</p>
-				<br>
-				<h4>Why do I need to push twice?</h4>
-					<p>Because HTML and JavaScript have decided to not cooperate; the solution is to push twice.</p>
-				<br>
-				<h4>Why are you recording names?</h4>
-					<p>Because I have always wanted an excuse to learn how to set up a databse, and so I can also use PHP and MySQL.</p>
-			</div>
+			<img src="../../Images/left_img.png" width=450px height=550px style="float:left;">
+			<br>
+			<br>
+			<br>
+			<input type="button" onclick="location.href='../Left_Turn/left_turn.html';" value="Turn Left?">
+			<br>
+			<br>
+			<input type="button" onclick="wrongAnswer()" value="Turn Right?">
 			
 		</div>
 		
 	</div>
+	
 	<script>
-		function GetName_LoadPage() {
-			var txt;
-			var person = prompt("Please enter your username:", "Bob Ross-chan");
-			if (person == null || person == "") {
-				txt = "You have canclled the prompt.";
-			} 
-			else {
-				txt = "Hello " + person + "! How are you today?";
-			}
-			
-		
-			
-			document.getElementById("play_nav").onclick = function () {
-				window.location.href = "../Intro/Intro.html"
-			};
-				
-		}
-		
-		function goToHelpPage() {
-			
-			document.getElementById("help_button").onclick = function () {
-				window.location.href = "Pages/Help/Help.html"
-			};
-			
-		}
-		
+	
+	function wrongAnswer (){
+		alert("Sorry, you must try again");
+	}
 	
 	</script>
+	
 	
 	
 
