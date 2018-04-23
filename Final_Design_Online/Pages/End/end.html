@@ -7,7 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="../../CSS/tired.css" >
+	<link rel="stylesheet" href="../../CSS/end.css" >
 	 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -34,12 +34,17 @@
 	</nav>
 	
 		<div class="content" width=450px height=550px>
-			<img src="../../Images/almost_end.png" width=450px height=550px style="float:left;">
+			<img src="../../Images/end_img.png" width=450px height=550px style="float:left;">
 			<br>
 			<br>
 			<br>
-			<input type="button"  value="Go towards the mountains" onclick="location.href='../End/end.html';">
-			
+			<input type="button" onclick="wrongAnswer()" value="The small mountain">
+			<br>
+			<br>
+			<input type="button" onclick="wrongAnswer()" value="The cute mountain">
+			<br>
+			<br>
+			<input type="button" onclick="youWin()" value="The neko mountain">
 		</div>
 		
 	</div>
@@ -48,6 +53,17 @@
 	
 	function wrongAnswer (){
 		alert("Sorry, you must try again");
+	}
+	
+	function youWin() {
+		var respone = confirm("Press ok to go back to the homepage, or cancel to stay.")
+		if (respone == true) {
+			alert("Oh yeah, BTW,Congrats on painting the perfect mountain")
+			location.href = '../../index.html';
+		}
+		else {
+			alert("You dont have to leave yet, you might find some surprises somewhere in the website's code; play again and check the code.")
+		}
 	}
 	
 	</script>
