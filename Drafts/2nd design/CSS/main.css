@@ -1,14 +1,14 @@
 body {
 	display:block;
 	text-align: center;
-	background-image: url("../Images/Backgrounds/bright_background.jpg");
+	background-image: url("https://uspstrackingtool.com/wp-content/uploads/2018/03/Anime-Landscape-Wallpaper.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	
 	
 }
 header {
-	color: pink;
+	color: orange;
 }
 .button {
 	margin: 20px;
@@ -24,7 +24,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     text-align: center;
-    margin: 10px;
+    margin: 30px;
 }
 
 img {
