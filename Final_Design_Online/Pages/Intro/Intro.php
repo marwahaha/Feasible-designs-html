@@ -45,7 +45,7 @@ mysqli_close($conn);
 				<a class="nav-link active"  href="../../index.html">Home</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link active" id="play_nav" onclick="location.href='../../Intro.html';">Play</a>
+				<a class="nav-link active" id="play_nav" onclick="location.href='Intro.html';">Play</a>
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-link active" href="../Help/Help.html">F.A.Q/Help</a>
