@@ -1,0 +1,5 @@
+TODO:
+- Make header in a brighter color
+- Improve shadow visibility
+- Add better "You are wrong functions" more personalized
+- Add a "you win page"
