@@ -41,18 +41,23 @@
 			<input type="button" onclick="location.href='../Forest/Forest.html';" value="Go to the forest">
 			<br>
 			<br>
-			<input type="button" onclick="wrongAnswer()" value="Go to the beach">
+			<input type="button" onclick="notBeach()" value="Go to the beach">
 			<br>
 			<br>
-			<input type="button" onclick="wrongAnswer()" value="Go to the mountain">
+			<input type="button" onclick="notMnt()" value="Go to the mountain">
 		</div>
 		
 	</div>
 	
 	<script>
 	
-	function wrongAnswer (){
-		alert("Sorry, you must try again");
+	
+	function notMnt(){
+		alert("Sorry, I can't let you go that way, the mountains are vegan, please chose again")
+	}
+	
+	function notBeach(){
+		alert("Sorry, I can't let you go to the beach, you don't have any swimming gear, please chose again")
 	}
 	
 	</script>

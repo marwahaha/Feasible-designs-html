@@ -1,14 +1,18 @@
 body {
 	height:100%;
-	width:100%
+	width:100%;
 	display:block;
 	text-align: center;
-	background-image: url("../Images/Backgrounds/find_ur_mnt.jpg"); 
-	background-size: cover;
+	/*
+	background-image: url("../Images/Backgrounds/samurai.jpg");
+	*/
+	background-color:white;
 	background-repeat: no-repeat;
+	
+	
 }
 header {
-	color: black;
+	color: pink;
 }
 
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -25,7 +29,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 img {
 	vertical-align: middle;
-	float:left;
+	
 }
 
 body, html {
@@ -41,4 +45,8 @@ button, input {
     overflow: visible;
     /* margin: 10px; */
     width: 200px;
+}
+
+#cat_img {
+	border: 5px solid black;
 }

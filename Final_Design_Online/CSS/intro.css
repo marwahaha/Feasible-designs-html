@@ -10,7 +10,7 @@ body {
 	
 }
 header {
-	color: pink;
+	color: black;
 }
 
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -36,5 +36,5 @@ body, html {
 
 p {
 	font-size: 30px;
-	text-shadow: 2px 2px #FF0000;
+	color:yellow;
 }
