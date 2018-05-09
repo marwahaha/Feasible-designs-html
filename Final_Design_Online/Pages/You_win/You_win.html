@@ -1,24 +1,3 @@
-<?php
-$server = "ptvp.myd.infomaniak.com";
-$user = 'ptvp_dmitriy';
-$pass = 'nations2018';
-$db = "ptvp_player_names";
-$person = $_POST['txt'];
-$conn = mysqli_connect($server, $user, $pass, $db);
-$sql = "INSERT INTO `users` (`user_names`) VALUES ('$person')";
-header("Access-Control-Allow-Origin: *");
-// Reset auto increment ALTER TABLE `users` AUTO_INCREMENT=1;
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-if (mysqli_query($conn, $sql)) {
-      
-} else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-mysqli_close($conn);
-?>
-
 <!doctype html>
 <html>
 <head>
@@ -27,7 +6,7 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="../../CSS/intro.css" > 
+	<link rel="stylesheet" href="../../CSS/You_win.css" > 
 	 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -37,7 +16,7 @@ mysqli_close($conn);
 	<title>Bob Ross and the hunt for the perfect mountain</title>
 </head>
 <body>
-	<header style="color:balack;"> <h1>Bob Ross and the hunt for the perfect mountain</h1> </header>
+	<header> <h1>Bob Ross and the hunt for the perfect mountain</h1> </header>
 	<div class="container">
 		<nav>
 			<ul class="nav nav-pills nav-fill">
@@ -54,12 +33,23 @@ mysqli_close($conn);
 			
 		</nav>
 		<div class="content">
-			<img src="../../Images/intro_img.png" id="intro_img" alt="clorox chan" width=450px height=550px>
-			<p>To find your perfect mountain to paint, 
-			<br> you will need to click the button that says:
-			<br> <strong>Find your perfect mountain</strong></p>
-			<br>
-			<input type="button" onclick="location.href='../Find_your_mnt/Find_your_mnt.html';" value="Find your perfect mountain">
+			<img src="../../Images/cat_mnt.jpg" id="cat_img" alt="cat mountain" width=450px height=550px onclick="youWin()">
+			<img src="../../Images/you_win_img.png" id="you_win_img" alt="the perfect mountain" width=450px height=550px>
+			
+		
 		</div>
+
+<script>
+	function youWin() {
+		var respone = confirm("Press ok to go back to the homepage, or cancel to stay.")
+		if (respone == true) {
+			alert("Oh yeah, BTW,Congrats on painting the perfect mountain")
+			location.href = '../../index.html';
+		}
+		else {
+			alert("You dont have to leave yet, you might find some surprises somewhere in the website's code; play again and check the code.")
+		}
+	}
+</script>
 </body>
 </html>

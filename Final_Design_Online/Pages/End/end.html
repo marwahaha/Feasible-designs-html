@@ -38,10 +38,10 @@
 			<br>
 			<br>
 			<br>
-			<input type="button" onclick="wrongAnswer()" value="The small mountain">
+			<input type="button" onclick="notSmallMNT()" value="The small mountain">
 			<br>
 			<br>
-			<input type="button" onclick="wrongAnswer()" value="The cute mountain">
+			<input type="button" onclick="notCuteMNT()" value="The cute mountain">
 			<br>
 			<br>
 			<input type="button" onclick="youWin()" value="The neko mountain">
@@ -51,27 +51,22 @@
 	
 	<script>
 	
-	function wrongAnswer (){
-		alert("Sorry, you must try again");
+	function notSmallMNT (){
+		alert("Sorry, that mountain is far too small to paint, please chose again");
+	}
+	
+	function notCuteMNT (){
+		alert("Sorry, that mountain is far too cute to paint, please chose again");
 	}
 	
 	function youWin() {
-		var respone = confirm("Press ok to go back to the homepage, or cancel to stay.")
-		if (respone == true) {
-			alert("Oh yeah, BTW,Congrats on painting the perfect mountain")
-			location.href = '../../index.html';
-		}
-		else {
-			alert("You dont have to leave yet, you might find some surprises somewhere in the website's code; play again and check the code.")
-		}
+		alert("You found the perfect mountain to paint, I will take you to a new page with the mountain you just painted")
+		location.href='../You_win/You_win.html';
 	}
 	
 	</script>
 	
-	
-	
-
-   
+ 
   </body>
   
   
