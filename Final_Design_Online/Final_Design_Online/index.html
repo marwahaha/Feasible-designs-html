@@ -1,0 +1,86 @@
+<!-- Final Design -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="referrer" content="always">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="CSS/main.css" >
+	 <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>
+	
+	function loadUserName () {
+			var person = prompt("Please enter your username:", "Bob Ross-chan");
+			document.getElementById("start_button").onclick = function () {
+				window.location.href = "Pages/Intro/Intro.html";
+			};
+			document.getElementById("play_nav").onclick = function () {
+				window.location.href = "Pages/Intro/Intro.html";
+			};
+			
+			document.getElementsByName("txt")[0].value = person;
+			document.getElementsByTagName("form")[0].submit();
+			
+			
+			
+			
+		}
+	function goToHelpPage() {
+			document.getElementById("help_button").onclick = function () {
+				window.location.href = "Pages/Help/Help.html"
+			};
+			
+        }
+				
+</script>
+	
+	
+	
+	<title>Bob Ross and the hunt for the perfect mountain</title>
+  </head>
+  <body >
+	<header> <h1>Bob Ross and the hunt for the perfect mountain</h1> </header>
+    <div class="container">
+	<nav>
+		
+		<ul class="nav nav-pills nav-fill">
+		  <li class="nav-item">
+			<a class="nav-link active"  href="index.html">Home</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link active" id="play_nav" onclick="location.href='Pages/Intro/Intro.html';">Play</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link active" href="Pages/Help/Help.html">F.A.Q/Help</a>
+		  </li>
+		</ul>
+		
+	</nav>
+		<div class="content">
+			<div class="greeting">
+				<img src="Images/clorox-chan.png" id="clorox_can" alt="clorox chan" width=450px height=550px>
+					<form method="post" id="user_form" action="Pages/Intro/Intro.php"> 
+					<input class="button" id ="start_button" type="submit"  name ="txt" onclick="loadUserName()" value="Go to Game">
+					<br>
+					</form>
+					<input class="button" id="help_button" name="help" type="button" onclick="location.href='Pages/Help/Help.html';" value="Help/F.A.Q" >
+					<br>
+					<!--<input class="button" name="easter_egg" type="button" onclick="location.href='https://www.youtube.com/watch?v=2KVjPWxKACs';" value="Nightcore song" -->
+					
+					
+				
+			</div>
+		</div>
+		
+	</div>
+
+</body> 
+</html>
