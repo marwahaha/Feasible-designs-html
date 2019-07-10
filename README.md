@@ -1,12 +1,12 @@
 # Feasible-designs-html
-This a repo with my first two designs for html, the online version and the folder I started working in and then abandonned.
+This a repo with my first two designs for html, the online version and the folder I started working in and then abandoned.
 
 Drafts contains:
 - First draft
 - Second draft
 
 Final_Design contains:
-- The abandonned project, that I later finished in Final_Design_Online
+- The abandoned project, that I later finished in Final_Design_Online
 
 Final_Design_Online contains:
 - The finished project
