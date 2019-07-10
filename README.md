@@ -6,7 +6,7 @@ Drafts contains:
 - Second draft
 
 Final_Design contains:
-- The abandonned project, that I later finished in Final_Design_Online
+- The abandoned project, that I later finished in Final_Design_Online
 
 Final_Design_Online contains:
 - The finished project
